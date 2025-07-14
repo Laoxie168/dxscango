@@ -50,6 +50,32 @@ DXScanGo 是一款基于 Go 语言开发的高性能、全自动 XSS 漏洞扫�
 参数帮助
 <img width="1029" height="252" alt="image" src="https://github.com/user-attachments/assets/006409a5-bc43-44fc-846d-3ca6a2fed83b" />
 
+```bash
+.\dxscango.exe xss -u https://example.com
+```
+单独运行xss
+<img width="1010" height="333" alt="image" src="https://github.com/user-attachments/assets/6fc6e267-397c-45a6-ba84-6513051f49f8" />
+
+报告生成
+<img width="829" height="472" alt="image" src="https://github.com/user-attachments/assets/7aea92e8-ecf1-4fcf-a75a-dcf159bd664a" />
+
+```bash
+.\dxscango.exe dir -u https://example.com -e php
+```
+单独运行目录遍历
+<img width="1442" height="740" alt="image" src="https://github.com/user-attachments/assets/5b6e7f03-325a-4bc9-bbf9-8522d7318b4a" />
+
+报告生成
+<img width="1367" height="947" alt="image" src="https://github.com/user-attachments/assets/f81a3fd6-258e-4400-a33a-d18526ec150c" />
+
+```bash
+.\dxscango.exe js -u https://example.com
+```
+单独运行js分析
+<img width="1464" height="907" alt="image" src="https://github.com/user-attachments/assets/bbfe8144-50d6-419f-a5cf-6edf44708c6a" />
+<img width="1317" height="942" alt="image" src="https://github.com/user-attachments/assets/82109193-e24d-4e0a-8523-094dabbe025e" />
+
+
 
 ### 注意
 ```bash
