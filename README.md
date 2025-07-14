@@ -37,6 +37,20 @@ DXScanGo 是一款基于 Go 语言开发的高性能、全自动 XSS 漏洞扫�
 - Windows/Linux/macOS 系统
 - 至少 2GB 可用内存
 
+## 📦 基础演示
+```bash
+.\dxscango.exe crawl -u https://example.com
+```
+爬虫+xss
+<img width="1440" height="593" alt="image" src="https://github.com/user-attachments/assets/be75855d-f74f-4856-ab0a-2ca5ef591577" />
+
+```bash
+.\dxscango.exe -h
+```
+参数帮助
+<img width="1029" height="252" alt="image" src="https://github.com/user-attachments/assets/006409a5-bc43-44fc-846d-3ca6a2fed83b" />
+
+
 ### 注意
 ```bash
 - 本程序为go编译的二进制,不要双击运行会闪退,命令行运行 dxscango.exe -h (win)
@@ -290,6 +304,18 @@ v1.0
 ## 📄 许可证
 
 本项目采用商业许可证，使用前请确保已获得有效授权。
+
+---
+
+## 📄 关于开源
+当版本更新幅度过大时,会选择性开源低版本供用户使用。
+
+---
+
+## 📊  查询授权
+
+跳转:https://0zqq.com/dxscango
+<img width="1052" height="502" alt="image" src="https://github.com/user-attachments/assets/a2e6f1fe-e2ff-4f29-b48f-5c05c8ab8bd7" />
 
 ---
 
