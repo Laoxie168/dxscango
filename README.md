@@ -181,6 +181,10 @@ grep "javascript" reports/xss_realtime_*.md
 
 
 📝 更新日志
+v-6.8
+
+优化线程池
+优化cookie注入
 
 v-1.6-1.6.7
 
