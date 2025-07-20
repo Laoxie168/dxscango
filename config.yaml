@@ -82,7 +82,7 @@ gau:
   mime_filter: true                 # MIME类型过滤 是否只爬取text/html类型的URL(关闭则默认爬全部)
   max_results_per_source: 2000      # 每个数据源最大结果数
   request_delay: 1000               # 请求间延迟(毫秒)
-  max_retries: 3                    # 最大重试次数
+  max_retries: 2                    # 最大重试次数
   providers:                        # 启用的数据源
     - "wayback"
     - "commoncrawl" 
@@ -112,8 +112,8 @@ js_analysis:
 # xss配置
 xss:
   enable: true                      # 是否启用XSS扫描
-  concurrency: 200                  # 扫描并发数
-  timeout: 15                       # 单请求超时时间(秒)
+  concurrency: 100                  # 扫描并发数
+  timeout: 10                       # 单请求超时时间(秒)
   proxy: ""    # HTTP代理地址 (空表示不使用代理)
   active_scan: true                 # 是否主动发送测试payload
   random_str_length: 8              # 随机标记长度
@@ -121,19 +121,19 @@ xss:
   max_payloads_per_param: 15        # 每参数最大payload数
 # 连接池配置(建议默认)
   http_pool:
-      max_idle_conns: 500             # 全局最大空闲连接数
-      max_idle_conns_per_host: 100    # 每个主机最大空闲连接数  
-      max_conns_per_host: 300         # 每个主机最大连接数(设置大于等于并发concurrency以免线程池问题)
-      idle_conn_timeout: 90           # 空闲连接超时时间(秒)
+      max_idle_conns: 300             # 全局最大空闲连接数
+      max_idle_conns_per_host: 50     # 每个主机最大空闲连接数  
+      max_conns_per_host: 120         # 每个主机最大连接数(设置大于等于并发concurrency以免线程池问题)
+      idle_conn_timeout: 30           # 空闲连接超时时间(秒)
       tls_handshake_timeout: 10       # TLS握手超时时间(秒)
       response_header_timeout: 15     # 响应头超时时间(秒)
       disable_keep_alives: false      # 是否禁用keep-alive
-      force_attempt_http2: true       # 是否强制尝试HTTP/2
+      force_attempt_http2: false       # 是否强制尝试HTTP/2
 
   
   # 参数fuzz配置
   param_fuzzing:
-      enable: false                     # 是否启用参数fuzz
+      enable: true                     # 是否启用参数fuzz
       dict_path: "dicts/fuzz.txt"      # fuzz字典路径
       max_params_per_url: 500          # 每个URL最大fuzz参数数量
 
