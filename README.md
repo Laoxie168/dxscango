@@ -1,4 +1,4 @@
-# DXScanGo v1.6.8 - 自动化XSS扫描框架
+# DXScanGo v1.7 - 自动化XSS扫描框架
 
 ## 📋 项目简介
 
